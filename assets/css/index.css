@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+navbar,
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+
+navbar {
+    width: auto;
+    justify-content: space-evenly;
+}
+
+#esemkasa-tripadvisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-smk {
+    height: 80px;
+}
+
+#txt-smk {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#search-bar {
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #303030;
+    padding: 0 45px;
+    background-image: url("/assets/svg/Magnifier.svg");
+    background-size: 25px 25px;
+    background-position: 10px;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.menu #sign-in {
+    background-color: #303030;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+navbar a {
+    color: #303030;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*--Content--*/
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrapper-1 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#title {
+    font-family: 'Geologica', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+#rating-div {
+    display: inline;
+}
+
+.rating {
+    color: #00AA6C;
+}
+
+#open-hours-div {
+    display: inline;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #545454;
+}
+
+#open-hours-text {
+    color: #545454;
+    text-decoration: underline;
+}
+
+.wrapper-2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#about-section {
+    width: 30%;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#about-section h2 {
+    font-size: 30px;
+}
+
+#about-section p {
+    font-size: 12px;
+}
+
+#img-thumbnail {
+    width: 60%;
+}
