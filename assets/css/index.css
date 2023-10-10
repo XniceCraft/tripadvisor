@@ -49,7 +49,7 @@ navbar {
     border-radius: 10px;
     border: 1px solid #303030;
     padding: 0 45px;
-    background-image: url("/assets/svg/Magnifier.svg");
+    background-image: url("assets/svg/Magnifier.svg");
     background-size: 25px 25px;
     background-position: 10px;
     background-repeat: no-repeat;
