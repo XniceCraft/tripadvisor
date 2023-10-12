@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;600&family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    gap: 20px;
+}
+
+hr {
+    width: 100%;
+}
+
+/*--Navbar Style--*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 150px;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#nav-title, #nav-search-bar-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-title-text, #nav-search-bar-toggle{
+    color: black;
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#nav-title-img {
+    height: 80px;
+}
+
+#nav-search-bar-toggle, .nav-menu li a{
+    font-size: 16px;
+}
+
+#nav-search-bar-toggle{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#nav-search-bar-toggle input{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#nav-search-bar {
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #303030;
+    padding: 0 45px;
+    background-image: url("assets/svg/Magnifier.svg");
+    background-size: 25px 25px;
+    background-position: 10px;
+    background-repeat: no-repeat;
+    min-width: 100px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: #303030;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.nav-menu #sign-in {
+    background-color: #303030;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: all ease-in-out .3s;
+}
+
+.nav-menu #sign-in:hover{
+    color: #303030;
+    background-color: white;
+    border: 1px #303030 solid;
+}
+
+.nav-menu-toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+
+.nav-menu-toggle input{
+    position: absolute;
+    height: 40px;
+    width: 28px;
+    top: -10px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nav-menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.nav-menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.nav-menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.nav-menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.nav-menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.nav-menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+@media screen and (max-width: 1100px){
+    .nav-menu li a span{
+        display: none;
+    }
+
+    #nav-search-bar {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        justify-content: space-between;
+    }
+    #nav-search-bar{
+        display: none;
+    }
+
+    #nav-search-bar-toggle{
+        display: flex;
+    }
+
+    .nav-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        height: 100vh;
+        flex-direction: column;
+        width: 100%;
+        z-index: 0;
+        transform: translateX(-100%);
+        transition: all .5s ease-in-out;
+        justify-content: flex-start;
+        padding-top: 100px;
+        gap: 60px;
+    }
+
+    #nav-search-bar {
+        width: 80%;
+    }
+
+    .nav-menu li a {
+        font-size: 24px;
+    }
+
+    .nav-menu.slide{
+        transform: translateX(0);
+    }
+
+    .nav-menu-toggle{
+        display: flex;
+    }
+
+    .nav-menu li a span{
+        display: inline;
+    }
+
+    #nav-title-text{
+        font-size: 12px;
+    }
+
+    #nav-title-text{
+        width: 80px;
+    }
+}
+
+/*--Content--*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrapper-1 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#title {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+#rating-div {
+    display: inline;
+}
+
+.rating {
+    color: #00AA6C;
+}
+
+#rating-div span {
+    margin-left: 20px;
+}
+
+#open-hours-div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#open-hours-div a, #open-hours-div span, #rating-div span{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #545454;
+}
+
+#open-hours-text {
+    text-decoration: underline;
+}
+
+@media screen  and (min-width: 767px){
+    .wrapper-2 {
+        flex-direction: row;
+    }
+    #about-section {
+        width: 30%;
+    }
+    #img-thumbnail {
+        width: 60%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #about-section p {
+        font-size: 16px;
+    }
+}
+
+@media screen  and (max-width: 768px){
+    .wrapper-2 {
+        flex-direction: column;
+    }
+    #about-section, #img-thumbnail {
+        width: 100%;
+    }
+    #about-section p {
+        font-size: 14px;
+    }
+}
+
+.wrapper-2 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#about-section {
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#about-section h2 {
+    font-size: 30px;
+}
+
+#img-thumbnail {
+    height: 100%;;
+    display: block;
+    box-shadow: 2px 1px 57px -9px rgba(0,0,0,0.8);
+}
